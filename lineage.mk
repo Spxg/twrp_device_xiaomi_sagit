@@ -20,11 +20,11 @@ PRODUCT_RELEASE_NAME := sagit
 $(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sagit
-PRODUCT_NAME := omni_sagit
+PRODUCT_NAME := lineage_sagit
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 6
 PRODUCT_MANUFACTURER := Xiaomi
