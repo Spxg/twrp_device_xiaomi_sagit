@@ -1,0 +1,39 @@
+diff --git a/msm8998/QCamera2/Android.mk b/msm8998/QCamera2/Android.mk
+index 184d9bc8..3f6f5ed8 100755
+--- a/msm8998/QCamera2/Android.mk
++++ b/msm8998/QCamera2/Android.mk
+@@ -97,8 +97,8 @@ LOCAL_C_INCLUDES := \
+         $(LOCAL_PATH)/util \
+         $(LOCAL_PATH)/HAL3 \
+         hardware/libhardware/include/hardware \
+-        $(SRC_MEDIA_HAL_DIR)/libstagefrighthw \
+-        $(SRC_MEDIA_HAL_DIR)/mm-core/inc \
++        hardware/qcom/media/msm8998/libstagefrighthw \
++        hardware/qcom/media/msm8998/mm-core/inc \
+         system/core/include/cutils \
+         system/core/include/system \
+         system/media/camera/include/system
+@@ -138,7 +138,7 @@ LOCAL_C_INCLUDES += \
+         $(TARGET_OUT_HEADERS)/mm-core/omxcore \
+         $(TARGET_OUT_HEADERS)/qcom/display
+ LOCAL_C_INCLUDES += \
+-        $(SRC_DISPLAY_HAL_DIR)/libqservice
++        hardware/qcom/display/msm8998/libqservice \
+ LOCAL_SHARED_LIBRARIES := liblog libhardware libutils libcutils libdl libsync
+ LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface libui libcamera_metadata
+ LOCAL_SHARED_LIBRARIES += libqdMetaData libqservice libbinder
+diff --git a/msm8998/QCamera2/HAL3/test/Android.mk b/msm8998/QCamera2/HAL3/test/Android.mk
+index 7c688f4e..c14b4633 100644
+--- a/msm8998/QCamera2/HAL3/test/Android.mk
++++ b/msm8998/QCamera2/HAL3/test/Android.mk
+@@ -23,8 +23,8 @@ LOCAL_C_INCLUDES += \
+     $(LOCAL_PATH)/../ \
+     $(LOCAL_PATH)/../../stack/mm-camera-interface/inc \
+     hardware/libhardware/include/hardware \
+-    $(SRC_MEDIA_HAL_DIR)/libstagefrighthw \
+-    $(SRC_MEDIA_HAL_DIR)/mm-core/inc \
++    hardware/qcom/media/msm8998/libstagefrighthw \
++    hardware/qcom/media/msm8998/mm-core/inc \
+     system/core/include/cutils \
+     system/core/include/system \
+     system/media/camera/include/system
